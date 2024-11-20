@@ -92,9 +92,59 @@ body{
   background-position: center;
   
 }
-img.logo {
-  width: 250px !important;
+/* Inner dynamic logo */
+.dynamic-logo {
+  width: 120px; 
+  height: 120px;
+  border-radius: 50%; /* Circular logo */
+  border: 5px solid #ff004f; /* Pink-red border */
+  background-color: black;
+  object-fit: cover;
+  z-index: 1; /* Keeps the logo above animations */
+  animation: zoom 3s infinite alternate; /* Subtle zoom effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Inner logo zoom animation */
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Particles effect inside the container */
+.dynamic-logo-container::after {
+  content: '';
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, #ff004f 0%, transparent 70%);
+  animation: particle-flow 5s linear infinite;
+  opacity: 0.3; /* Subtle particles */
+  z-index: -2; /* Behind the glow effect */
+}
+
+/* Moving particle animation */
+@keyframes particle-flow {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(50%, 50%) scale(1.5);
+  }
+}
+
+/* Hover interaction for the logo */
+.dynamic-logo:hover {
+  transform: scale(1.2);
+  box-shadow: 0 10px 30px rgba(255, 0, 79, 0.8), 0 20px 40px rgba(0, 0, 0, 0.7);
+  border-color: black; /* Reverse the border color */
+  background: linear-gradient(45deg, black, #ff004f); /* Gradient background */
+}
+
 nav{
   display: flex;
   align-items: center;
