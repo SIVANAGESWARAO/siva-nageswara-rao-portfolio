@@ -92,7 +92,59 @@ body{
   background-position: center;
   
 }
-/* Inner dynamic logo */
+img.logo {
+  width: 250px !important;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+  .container{
+    padding: 10px 10%;
+  }
+/* Outer dynamic container */
+.dynamic-logo-container {
+  position: relative;
+  width: 200px; 
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Circular shape */
+  background: radial-gradient(circle, #ff004f, black); /* Outer gradient effect */
+  overflow: hidden; /* Clip animated particles */
+  box-shadow: 0 10px 20px rgba(255, 0, 79, 0.6), 0 15px 30px rgba(0, 0, 0, 0.8);
+  animation: rotate-container 6s linear infinite; /* Rotating effect */
+}
+
+
+
+/* Pulsating glow effect around the container */
+.dynamic-logo-container::before {
+  content: '';
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 0, 79, 0.4), transparent);
+  z-index: -1; /* Behind everything */
+  animation: pulse-glow 2.5s infinite alternate;
+}
+
+/* Glow pulse animation */
+@keyframes pulse-glow {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+Inner dynamic logo */
 .dynamic-logo {
   width: 120px; 
   height: 120px;
