@@ -1,0 +1,1518 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+
+/* Container styles */
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Header styles */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff4c60; /* Apply pink-red color to the main heading */
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color:#fff; /* Use black for section headings */
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0;
+  color: #ff4c60;
+}
+
+/* Timeline container */
+.timeline-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #ff4c60;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Timeline items */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+/*----------------------------------------------Home--------------------------------------------*/
+
+/* styles.css */
+*{
+  margin :0;
+  padding: 0;
+  font-family: 'Poppins',sans-serif;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background: #080808;
+  color: #fff;
+}
+#header{
+  width: 100%;
+  height: 100vh;
+ 
+  background-size: cover;
+  background-position: center;
+  
+}
+img.logo {
+  width: 250px !important;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+  .container{
+    padding: 10px 10%;
+  }
+.logo{
+  width: 140px;
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+
+}
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+nav ul li a::after{
+  content: '';
+  width: 0%;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+nav ul li a:hover::after{
+  width:100%;
+}
+
+
+/* Header Text Styles */
+.header-text {
+  margin-top: 20%;
+  text-align: center;
+  font-size: 30px;
+  opacity: 0;
+  animation: fade-in 2s forwards;
+}
+
+.header-text h1 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.header-text h1 span {
+  color: #ff004f;
+}
+
+.header-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.header-buttons .btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  background: #ff004f;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.header-buttons .btn:hover {
+  background: #e60045;
+  transform: scale(1.1);
+}
+
+.header-buttons .btn-alt {
+  background: #444;
+}
+
+.header-buttons .btn-alt:hover {
+  background: #666;
+}
+/* Scroll to Projects Icon */
+.scroll-to-projects {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-to-projects .circle {
+  width: 60px;
+  height: 60px;
+  background: #ff004f;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.scroll-to-projects .circle:hover {
+  background: #e60045;
+}
+/* Apply to Java Web Developer */
+.header-text p.animate-slide-in-left {
+  opacity: 0;
+  animation: slide-in-left 1.5s ease-out forwards;
+}
+@keyframes bounce-3d {
+  0%, 100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    box-shadow: 0px 10px 20px rgba(255, 0, 79, 0.5);
+  }
+  25% {
+    transform: translateY(-30px) scale(1.1) rotate(5deg);
+    box-shadow: 0px 15px 25px rgba(255, 0, 79, 0.7);
+  }
+  50% {
+    transform: translateY(0px) scale(0.9) rotate(-5deg);
+    box-shadow: 0px 5px 10px rgba(255, 0, 79, 0.4);
+  }
+  75% {
+    transform: translateY(-15px) scale(1.05) rotate(3deg);
+    box-shadow: 0px 12px 20px rgba(255, 0, 79, 0.6);
+  }
+}
+
+.scroll-to-projects .circle {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #ff004f, #e60045);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  animation: bounce-3d 2s infinite;
+  perspective: 1000px;
+}
+
+.scroll-to-projects .circle:hover {
+  background: linear-gradient(135deg, #e60045, #c5003a);
+  transform: scale(1.2) rotate(5deg);
+}
+
+
+/* Parallax Background */
+#header {
+  background: linear-gradient(135deg, #1a1a1a, #111) fixed;
+  animation: animate-bg 10s infinite;
+}
+
+@keyframes animate-bg {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+
+/*-----------------------------------------------about-----------------------------------------*/
+/* General About Section Styling */
+#about {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #23272e, #0e1116);
+  color: #f0f0f0;
+  border-radius: 20px;
+  margin-top: 50px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.About-col-1 {
+  flex-basis: 35%;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slide-in-left 1s forwards 0.5s;
+}
+
+.About-col-1 img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ff4c60;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 76, 96, 0.5);
+}
+
+.About-col-1 img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(255, 76, 96, 0.7);
+}
+
+.About-col-2 {
+  flex-basis: 60%;
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slide-in-right 1s forwards 0.5s;
+}
+
+.sub-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ff4c60;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+  color: #d0d0d0;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 30px 0;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tab-links {
+  font-size: 58px;
+  font-weight: 1000;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 0;
+  color: #ff4c60;
+  transition: color 0.3s ease;
+}
+
+.tab-links:hover {
+  color: #ff4c60;
+}
+
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff4c60;
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+  width: 80%;
+}
+
+.tab-contents ul {
+  margin: 0;
+  padding: 0;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+.tab-contents ul li span {
+  color: #ff4c60;
+  font-weight: 500;
+}
+
+.tab-contents {
+  display: none;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+/* Animations */
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .sub-title {
+    font-size: 2rem;
+  }
+
+  .tab-titles {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .About-col-1 img {
+    max-width: 250px;
+  }
+}
+/* Initial Hidden State for Animations */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(20px); /* Default starting position */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animation Classes */
+[data-animate].animate-slide-in-left {
+  opacity: 1;
+  transform: translateX(0); /* Slide in from the left */
+}
+
+[data-animate].animate-slide-in-right {
+  opacity: 1;
+  transform: translateX(0); /* Slide in from the right */
+}
+
+[data-animate].animate-fade-in {
+  opacity: 1;
+  transform: translateY(0); /* Fade in with upward motion */
+}
+
+
+
+
+/* Left and right s/*----------------------------------------skills-----------------------------------------*/
+/* General styles */
+
+
+/* Skills section styles */
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill {
+  text-align: center;
+  width: 120px;
+  background-color: white; /* White background for skill cards */
+  border: 2px solid #ff4c60; /* Border matches the pink-red theme */
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.skill p {
+  margin: 0;
+  font-size: 1rem;
+  color: black; /* Black text for skill names */
+}
+
+/* Add hover effect for skill cards */
+.skill:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer (optional, for attribution) */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ff4c60;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/*-------------------------------------------experience------------------------------------------*/
+
+/* Timeline container */
+.timeline-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Vertical line */
+.timeline-container .timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #ff4c60;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Timeline items */
+.timeline-container .timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Left and right side positioning */
+.timeline-container .timeline-item.left {
+  left: 0;
+  text-align: justify;
+}
+
+.timeline-container .timeline-item.right {
+  left: 50%;
+  text-align: justify;
+}
+
+/* Card styling */
+.timeline-container .timeline-item .timeline-content {
+  display: inline-block;
+  background: #292929;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+  width: 80%;
+}
+
+/* For the left side items */
+.timeline-container .timeline-item.left .timeline-content {
+  margin-right: 40px; /* Adding space between the card and the line */
+}
+
+/* For the right side items */
+.timeline-container .timeline-item.right .timeline-content {
+  margin-left: 40px; /* Adding space between the card and the line */
+}
+
+.timeline-container .timeline-content h3 {
+  margin: 0;
+  color: #ff4c60;
+  font-size: 1.2rem;
+}
+
+.timeline-container .timeline-content p {
+  margin: 10px 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.timeline-container .timeline-content a {
+  color: #ff4c60;
+  text-decoration: none;
+}
+
+.timeline-container .timeline-content a:hover {
+  text-decoration: underline;
+}
+
+/* Timeline date positioning */
+.timeline-container .timeline-item .timeline-date {
+  position: absolute; /* Use absolute positioning */
+  font-size: 0.9rem;
+  color: #ccc;
+  font-weight: bold;
+  padding: 0 10px; /* Adds some spacing between the date and content */
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the date */
+  white-space: nowrap; /* Prevents the date from wrapping */
+}
+
+/* For left side items, place the year on the left side of the line */
+.timeline-container .timeline-item.left .timeline-date {
+  left: 100%; /* Move to the left side of the line */
+  margin-left: 40px; /* Equal to the margin space of the card */
+  text-align: left; /* Align to the left */
+}
+
+/* For right side items, place the year on the right side of the line */
+.timeline-container .timeline-item.right .timeline-date {
+  right: 100%; /* Move to the right side of the line */
+  margin-right: 40px; /* Equal to the margin space of the card */
+  text-align: right; /* Align to the right */
+}
+
+/* Connecting cards to the vertical line */
+.timeline-container .timeline-item.left::after,
+.timeline-container .timeline-item.right::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #ff4c60;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.timeline-container .timeline-item.left::after {
+  right: -7.5px;
+}
+
+.timeline-container .timeline-item.right::after {
+  left: -7.5px;
+}ide positioning */
+.timeline-item.left {
+  left: 0;
+  text-align: justify;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: justify;
+}
+
+/* Card styling */
+.timeline-content {
+  display: inline-block;
+  background: #292929;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+  width: 80%;
+}
+
+/* For the left side items */
+.timeline-item.left .timeline-content {
+  margin-right: 40px; /* Adding space between the card and the line */
+}
+
+/* For the right side items */
+.timeline-item.right .timeline-content {
+  margin-left: 40px; /* Adding space between the card and the line */
+}
+
+.timeline-content h3 {
+  margin: 0;
+  color: #ff4c60;
+  font-size: 1.2rem;
+}
+
+.timeline-content p {
+  margin: 10px 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.timeline-content a {
+  color: #ff4c60;
+  text-decoration: none;
+}
+
+.timeline-content a:hover {
+  text-decoration: underline;
+}
+
+/* Timeline date positioning */
+.timeline-date {
+  position: absolute; /* Use absolute positioning */
+  font-size: 0.9rem;
+  color: #ccc;
+  font-weight: bold;
+  padding: 0 10px; /* Adds some spacing between the date and content */
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the date */
+  white-space: nowrap; /* Prevents the date from wrapping */
+}
+
+/* For left side items, place the year on the left side of the line */
+.timeline-item.left .timeline-date {
+  left: 100%; /* Move to the left side of the line */
+  margin-left: 40px; /* Equal to the margin space of the card */
+  text-align: left; /* Align to the left */
+}
+
+/* For right side items, place the year on the right side of the line */
+.timeline-item.right .timeline-date {
+  right: 100%; /* Move to the right side of the line */
+  margin-right: 40px; /* Equal to the margin space of the card */
+  text-align: right; /* Align to the right */
+}
+
+/* Connecting cards to the vertical line */
+.timeline-item.left::after,
+.timeline-item.right::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #ff4c60;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.timeline-item.left::after {
+  right: -7.5px;
+}
+
+.timeline-item.right::after {
+  left: -7.5px;
+}
+.services-list div i.fa-users {
+  color: #4CAF50; /* Green for users */
+}
+
+.services-list div i.fa-satellite {
+  color: #2196F3; /* Blue for satellite */
+}
+
+
+
+.services-list div i.fa-user-doctor {
+  color: lightskyblue; /* Orange for doctor */
+}
+
+/*----------------------------------------------projects-------------------------------------*/
+#portfolio{
+  padding: 50px 0;
+}
+.work-list{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+grid-gap: 40px;
+margin-top: 50px;
+}
+.work{
+border-radius: 10px;
+position: relative;
+overflow: hidden;
+}
+.work img{
+width: 100%;
+border-radius: 10px;
+display: block;
+transition: transform 0.5s;
+}
+.layer{
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+.layer h3{
+  font-weight: 500;
+  margin-bottom: 20px;
+  }
+.layer a{
+margin-top: 20px;
+color: #ff004f;
+text-decoration: none;
+font-size: 18px;
+line-height: 60px;
+background: #fff;
+width: 60px;
+height: 60px;
+border-radius: 50%;
+text-align: center;
+}
+.work:hover img{
+  transform: scale(1.1);
+}
+.work:hover .layer{
+  height: 100%;
+}
+.btn{
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+  }
+  
+.btn:hover{
+  background: #ff004f;
+  }
+  /*---------------------------------Certificates------------------------------------*/
+/*cerficates*/
+/* Container for certifications with a gradient background */
+#certifications {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1a1d23, #101318); /* Gradient dark background */
+  color: #f0f0f0;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Ensures the rain doesn't overflow */
+}
+
+.sub-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ff4c60;
+  margin-bottom: 40px;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Certification Grid Styling */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Certification Card Styling */
+.certification-card {
+  background: #23272e;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: dance 2s infinite alternate;
+}
+
+.view-cert-btn {
+  background-color: #ff4c60;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.certification-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.certification-card h3 {
+  font-size: 1.5rem;
+  color: #ff4c60;
+  margin-bottom: 10px;
+}
+
+.certification-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d0d0d0;
+}
+
+.certification-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(255, 76, 96, 0.7);
+  animation: bounce 0.5s ease-out;
+}
+
+@media (max-width: 768px) {
+  .certification-card {
+    padding: 15px;
+  }
+
+  .certification-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .certification-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* "Dance" Animation for Cards */
+@keyframes dance {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(3deg) translateY(-5px);
+  }
+  100% {
+    transform: rotate(-3deg) translateY(5px);
+  }
+}
+
+/* Bounce Effect on Hover */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Rain of Stars and Flowers */
+.rain-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.star, .flower {
+  position: absolute;
+  animation: fall 5s linear infinite, float 3s ease-in-out infinite;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.star {
+  width: 10px;
+  height: 10px;
+  background-color: #ffd700;
+  border-radius: 50%;
+}
+
+.flower {
+  width: 12px;
+  height: 12px;
+  background-color: #ff6f61;
+  border-radius: 50%;
+  animation: fall 6s linear infinite, float 3s ease-in-out infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Floating Animation for Stars and Flowers */
+@keyframes float {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(50px) rotate(45deg);
+  }
+  100% {
+    transform: translateX(-50px) rotate(-45deg);
+  }
+}
+
+/* Activating Rain Effect */
+#rain.rain-active .star,
+#rain.rain-active .flower {
+  animation: fall 5s linear infinite, float 3s ease-in-out infinite;
+}
+/* Rain container */
+.rain-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Star and Flower Styles */
+.star, .flower {
+  position: absolute;
+  top: 0;
+  opacity: 0.8;
+  z-index: 1;
+  border-radius: 50%;
+  animation: burst 2s ease-in-out infinite, randomColors 2s infinite alternate;
+}
+
+/* Star Styles (Colorful for Birthday) */
+.star {
+  width: 12px;
+  height: 12px;
+  background-color: #ffd700; /* Default Gold */
+  animation: burst 2s ease-in-out infinite, randomColorsStar 2s infinite alternate;
+}
+
+/* Flower Styles (Colorful for Birthday) */
+.flower {
+  width: 16px;
+  height: 16px;
+  background-color: #ff69b4; /* Default Pink */
+  animation: burst 2s ease-in-out infinite, randomColorsFlower 2s infinite alternate;
+}
+
+/* Bursting Animation (Spread out from Left and Right) */
+@keyframes burst {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(var(--x)) translateY(var(--y));
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(0) translateY(100vh); /* Falls down */
+    opacity: 0;
+  }
+}
+
+/* Random Color Animation for Stars */
+@keyframes randomColorsStar {
+  0% { background-color: #ffd700; } /* Gold */
+  25% { background-color: #ff4c60; } /* Red */
+  50% { background-color: #00bfff; } /* Sky Blue */
+  75% { background-color: #ff6347; } /* Tomato */
+  100% { background-color: #ff1493; } /* Deep Pink */
+}
+
+/* Random Color Animation for Flowers */
+@keyframes randomColorsFlower {
+  0% { background-color: #ff69b4; } /* Hot Pink */
+  25% { background-color: #ff4500; } /* Orange Red */
+  50% { background-color: #32cd32; } /* Lime Green */
+  75% { background-color: #ffff00; } /* Yellow */
+  100% { background-color: #00ffff; } /* Cyan */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .star, .flower {
+    width: 10px;
+    height: 10px;
+  }
+}
+  /*-----------------------------------contact--------------------------------------------------*/
+  #contact {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #333, #111); /* Dark gradient background */
+    color: #fff; /* Light text for readability */
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  #contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contact-left,
+  .contact-right {
+    flex: 1 1 45%; /* Responsive layout */
+    min-width: 300px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Contact Left Section */
+  .contact-left {
+    text-align: left;
+  }
+  
+  .contact-left .sub-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff004f; /* Bold red for titles */
+    font-weight: 600;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .contact-left p {
+    font-size: 1rem;
+    margin: 15px 0;
+    line-height: 1.5;
+  }
+  
+  .contact-left p i {
+    font-size: 20px;
+    margin-right: 10px;
+    transition: transform 0.3s, color 0.3s;
+    display: inline-block; /* Ensure the icon can be animated */
+  }
+  .contact-left p i.fa-envelope {
+    color: #fff; /* Blue (common email color) */
+  }
+  .contact-left p i.fa-square-phone {
+    color: #34b7f1; /* Greenish-blue color */
+  }
+  
+  /* Hover effects to slightly change the color when hovered */
+  .contact-left p i.fa-envelope:hover {
+    color: #ff004f; /* Darker blue on hover */
+    animation: shake 0.5s ease; 
+  }
+  
+  .contact-left p i.fa-square-phone:hover {
+    color: #1a9bc9; /* Darker blue-green on hover */
+    animation: shake 0.5s ease; 
+  }
+  
+  .social-icons a {
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 15px;
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  /* Individual Social Media Icon Colors */
+  .social-icons a .fa-facebook {
+    color: #1877f2; /* Facebook Blue */
+  }
+  
+  .social-icons a .fa-twitter-square {
+    color: #1da1f2; /* Twitter Blue */
+  }
+  
+  .social-icons a .fa-instagram {
+    color: #e4405f; /* Instagram Pink */
+  }
+  
+  .social-icons a .fa-linkedin {
+    color: #0a66c2; /* LinkedIn Blue */
+  }
+  
+  .social-icons a .fa-whatsapp {
+    color: #25d366; /* WhatsApp Green */
+  }
+  
+  .social-icons a:hover {
+    transform: translateY(-3px); /* Slight lift effect */
+  }
+  
+  /* Add a hover effect to change the icon's color when hovering */
+  .social-icons a:hover .fa-facebook {
+    color: #3b5998; /* Darker Facebook Blue on hover */
+    animation: shake 0.5s ease;
+  }
+  
+  .social-icons a:hover .fa-twitter-square {
+    color: #00acee; /* Darker Twitter Blue on hover */
+    animation: shake 0.5s ease;
+  }
+  
+  .social-icons a:hover .fa-instagram {
+    color: #c13584; /* Darker Instagram Pink on hover */
+    animation: shake 0.5s ease;
+  }
+  
+  .social-icons a:hover .fa-linkedin {
+    color: #006097; /* Darker LinkedIn Blue on hover */
+    animation: shake 0.5s ease;
+  }
+  
+  .social-icons a:hover .fa-whatsapp {
+    color: #128c7e; /* Darker WhatsApp Green on hover */
+    animation: shake 0.5s ease;
+  }
+  
+  
+  .contact-left .btn2 {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 40px;
+    background: #ff004f; /* Red background for buttons */
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-left .btn2:hover {
+    background: #d10040; /* Darker red on hover */
+    transform: translateY(-5px); /* Slight lift effect on hover */
+  }
+  
+  /* Contact Right Section */
+  .contact-right form {
+    width: 100%;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    border: 1px solid #444; /* Dark border */
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 1rem;
+    border-radius: 6px;
+    background: #f9f9f9; /* Dark background for inputs */
+    /*color: #fff; /* White text for inputs */
+    transition: border-color 0.3s ease, background 0.3s ease;
+  }
+  
+  form input:focus,
+  form textarea:focus {
+    border-color: #ff004f; /* Red focus effect */
+    outline: none;
+    background: #fff; /* Slightly lighter background on focus */
+  }
+  
+  form .btn2 {
+    padding: 14px 60px;
+    font-size: 1rem;
+    margin-top: 20px;
+    background: #ff004f;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  form .btn2:hover {
+    background: #d10040; /* Darker red on hover */
+    transform: translateY(-5px); /* Slight lift effect on hover */
+  }
+  
+  /* Copyright Section */
+  .copyright {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: #222; /* Dark footer background */
+    color: #fff;
+    font-size: 0.9rem;
+    position: relative;
+    transition: background 0.3s ease;
+  }
+  
+  .copyright i {
+    color: #ff004f; /* Red heart icon */
+  }
+  
+  .copyright:hover {
+    background: #111; /* Even darker on hover */
+  }
+  
+  /* Media Query for Tablets and Smaller Devices */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contact-left,
+    .contact-right {
+      flex: 1 1 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .contact-left .sub-title {
+      font-size: 1.8rem;
+    }
+  
+    .contact-left p,
+    .contact-right form input,
+    .contact-right form textarea {
+      font-size: 1rem;
+    }
+  
+    .contact-left .btn2 {
+      font-size: 1rem;
+      padding: 12px 30px;
+    }
+  
+    .contact-right form .btn2 {
+      font-size: 1rem;
+      padding: 14px 40px;
+    }
+  }
+  /* Popup Message Styling */
+.popup-message {
+  display: none; /* Hide the popup by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #28a745;
+  color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  z-index: 1000; /* Ensure it's on top of other elements */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  width: 300px;
+}
+
+.popup-message p {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Style the popup message when it is displayed */
+.popup-message.show {
+  display: block; /* Show the popup */
+}
+
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 480px) {
+    .contact-left .sub-title {
+      font-size: 1.5rem;
+    }
+  
+    .contact-left p,
+    .contact-right form input,
+    .contact-right form textarea {
+      font-size: 0.9rem;
+    }
+  
+    .contact-left .btn2 {
+      font-size: 1rem;
+      padding: 12px 25px;
+    }
+  
+    .contact-right form .btn2 {
+      font-size: 1rem;
+      padding: 14px 40px;
+    }
+  }
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px); /* Move left */
+    }
+    50% {
+      transform: translateX(5px); /* Move right */
+    }
+    75% {
+      transform: translateX(-5px); /* Move left */
+    }
+    100% {
+      transform: translateX(0); /* Back to the original position */
+    }
+  }
+  
+/*------------------------------------------CSS for small screen---------------------------------*/
+@media only screen and(max-width: 600px){
+  .header-text{
+    margin-top: 100%;
+    font-size: 16px;
+  }
+  .header-text h1{
+    font-size: 30px;
+  }
+  nav .fa-solid{
+    display: block;
+    font-size: 25px;
+  }
+  nav ul{
+    background:#ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height:100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+
+  }
+  nav ul li{
+    display: block;
+    margin: 25px;
+
+  }
+  nav ul .fa-solid{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+.sub-title{
+  font-size: 40px;
+}
+.About-col-1, .About-col-2{
+  flex-basis: 100%;
+
+}
+.About-col-1{
+  margin-bottom: 30px;
+}
+.About-col-2{
+  font-size: 14px;
+}
+.tab-links{
+  font-size: 16px;
+  margin-right: 20px;
+}
+.contact-left, .contact-righr{
+  flex-basis: 100%;
+}
+.copyright{
+  font-size: 14px;
+}
+}
+#msg{
+  color: #61b752;
+  margin-top: -40px;
+  display: block;
+}
